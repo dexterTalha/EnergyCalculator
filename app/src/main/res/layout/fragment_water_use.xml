@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Water_Use">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:id="@+id/appbar_thermal"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="45dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/insurance" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:gravity="center"
+                    android:paddingEnd="10dp"
+                    android:text="Water Use"
+                    android:textAlignment="textEnd"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar_thermal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_marginTop="?actionBarSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appbar_thermal">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:gravity="end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Internal Water Use"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@android:color/darker_gray"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Kitchen Tap"
+                        />
+                    <EditText
+                        android:id="@+id/text_kitchen_tap"
+                        android:hint="-"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:background="@drawable/edit_text"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:textSize="15sp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:layout_height="wrap_content"
+                        android:text="L/min"
+                        />
+
+                    <ImageButton
+                        android:src="@drawable/ic_menu_camera"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="150dp"
+                        android:layout_gravity="start|center"
+                        android:layout_height="wrap_content"
+                        android:text="Worst Basin Tap"
+                        />
+                    <EditText
+                        android:id="@+id/text_basin_tap"
+                        android:hint="-"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:background="@drawable/edit_text"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp" />
+                    <TextView
+                        android:textSize="15sp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:layout_height="wrap_content"
+                        android:text="L/min"
+                        />
+
+                    <ImageButton
+                        android:src="@drawable/ic_menu_camera"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="150dp"
+                        android:layout_gravity="start|center"
+                        android:layout_height="wrap_content"
+                        android:text="Worst Shower"
+                        />
+                    <EditText
+                        android:layout_gravity="center"
+                        android:id="@+id/text_worst_shower"
+                        android:hint="-"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:background="@drawable/edit_text"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:textSize="15sp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:layout_height="wrap_content"
+                        android:text="L/min"
+                        />
+
+                    <ImageButton
+                        android:src="@drawable/ic_menu_camera"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="start"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="All flow rates measured by Inspector"
+                        />
+
+                    <RadioButton
+                        android:checked="false"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="start|center"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Heat Pump(to air)"
+                        />
+                    <Spinner
+                        android:id="@+id/spinner_heat_to_air"
+                        android:background="@drawable/spinner_design_normal"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="end|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:text="Documentation sited by Inspector"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:checked="false" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.constraint.ConstraintLayout>
+
+
+</FrameLayout>

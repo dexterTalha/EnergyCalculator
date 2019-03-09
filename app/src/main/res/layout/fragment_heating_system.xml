@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_heating_system"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Heating_System">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:id="@+id/appbar_thermal"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="45dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/insurance" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:gravity="center"
+                    android:paddingEnd="10dp"
+                    android:text="Heating Systems"
+                    android:textAlignment="textEnd"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar_thermal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_marginTop="?actionBarSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appbar_thermal">
+
+
+                <TextView
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:maxLines="2"
+                    android:textAlignment="center"
+                    android:text="@string/head_heating_system"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:gravity="end"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        />
+                    <TextView
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="KW"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Heat Pump(to air)"
+                        />
+                    <Spinner
+                        android:id="@+id/spinner_heat_to_air"
+                        android:background="@drawable/spinner_design_normal"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp" />
+                    <EditText
+                        android:id="@+id/text_heat_to_air"
+                        android:hint="-"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:background="@drawable/edit_text"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:contentDescription="Heat Pump"
+                        android:src="@drawable/ic_menu_camera" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Heat Pump(hydronic)"
+                        />
+                    <Spinner
+                        android:id="@+id/spinner_heat_hydronic"
+                        android:background="@drawable/spinner_design_normal"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp" />
+                    <EditText
+                        android:id="@+id/text_hydronic"
+                        android:hint="-"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:background="@drawable/edit_text"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+                    <ImageButton
+                        android:src="@drawable/ic_menu_camera"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Gas"
+                        />
+                    <Spinner
+                        android:id="@+id/spinner_gas"
+                        android:background="@drawable/spinner_design_normal"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp" />
+                    <EditText
+                        android:id="@+id/text_gas"
+                        android:hint="-"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:background="@drawable/edit_text"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+                    <ImageButton
+                        android:src="@drawable/ic_menu_camera"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Wood/Pellet"
+                        />
+                    <Spinner
+                        android:id="@+id/spinner_wood_pellet"
+                        android:background="@drawable/spinner_design_normal"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp" />
+                    <EditText
+                        android:id="@+id/text_wood_pellet"
+                        android:hint="-"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:background="@drawable/edit_text"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+                    <ImageButton
+                        android:src="@drawable/ic_menu_camera"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Electric Heater"
+                        />
+                    <Spinner
+                        android:id="@+id/spinner_electric_heater"
+                        android:background="@drawable/spinner_design_normal"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp" />
+                    <EditText
+                        android:id="@+id/text_electric_heater"
+                        android:hint="-"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:background="@drawable/edit_text"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+                    <ImageButton
+                        android:src="@drawable/ic_menu_camera"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:gravity="end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Water Heating"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@android:color/darker_gray"
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:gravity="start"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="KW"
+                        />
+                    <TextView
+                        android:gravity="start"
+                        android:textSize="15sp"
+                        android:paddingStart="20dp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Efficiency"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Gas Califont"
+                        />
+                    <EditText
+                        android:id="@+id/text_gas_califont"
+                        android:hint="-"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:background="@drawable/edit_text"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+                    <Spinner
+                        android:id="@+id/spinner_gas_califont_efficiency"
+                        android:background="@drawable/spinner_design_normal"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp" />
+                    <ImageButton
+                        android:src="@drawable/ic_menu_camera"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="OR"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Hot Water Cylinder"
+                        />
+                    <EditText
+                        android:id="@+id/text_hot_water_cylinder"
+                        android:hint="-"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:background="@drawable/edit_text"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+                    <Spinner
+                        android:id="@+id/spinner_hot_water_cylinder"
+                        android:background="@drawable/spinner_design_normal"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp" />
+                    <ImageButton
+                        android:src="@drawable/ic_menu_camera"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:gravity="start|center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Solar or Wet \nback boosted?"
+                        />
+                    <Spinner
+                        android:id="@+id/spinner_back_boosted"
+                        android:entries="@array/yesno"
+                        android:background="@drawable/spinner_design_normal"
+                        android:paddingStart="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp" />
+                    <ImageButton
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_menu_camera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

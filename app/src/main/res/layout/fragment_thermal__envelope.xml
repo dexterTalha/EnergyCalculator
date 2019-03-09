@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_thermal_envelope"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Thermal_Envelope">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:id="@+id/appbar_thermal"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/insurance" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:gravity="center"
+            android:paddingEnd="10dp"
+            android:text="Thermal Envelope"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+<ScrollView
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/appbar_thermal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="?actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar_thermal">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Wall Insulation"
+             />
+            <EditText
+                android:background="@drawable/edit_text"
+                android:paddingStart="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Glazing"
+                />
+            <EditText
+                android:background="@drawable/edit_text"
+                android:paddingStart="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Roof insulation"
+                />
+            <EditText
+
+                android:background="@drawable/edit_text"
+                android:paddingStart="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Skylights"
+                />
+            <EditText
+
+                android:background="@drawable/edit_text"
+                android:paddingStart="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Floor insulation"
+                />
+            <EditText
+                android:background="@drawable/edit_text"
+                android:paddingStart="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Orientation"
+                />
+            <EditText
+                android:background="@drawable/edit_text"
+                android:paddingStart="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Mass"
+                />
+            <EditText
+                android:background="@drawable/edit_text"
+                android:paddingStart="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Ventilation/\nAirtightness"
+                />
+            <EditText
+                android:background="@drawable/edit_text"
+                android:paddingStart="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>
